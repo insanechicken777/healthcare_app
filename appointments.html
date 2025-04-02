@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - HealthCare Plus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <h1>HealthCare Plus</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="appointments.html" class="active"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+                <li><a href="prescriptions.html"><i class="fas fa-prescription-bottle-alt"></i> Prescriptions</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="page-banner">
+        <h2>Book Your Appointment</h2>
+        <p>Schedule a visit with our specialists</p>
+    </div>
+
+    <div class="container">
+        <section class="appointment-section">
+            <h2>Schedule Your Appointment</h2>
+            <form id="appointment-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointment-type"><i class="fas fa-list"></i> Appointment Type:</label>
+                        <select id="appointment-type" required>
+                            <option value="in-person">In-Person Visit</option>
+                            <option value="video">Video Consultation</option>
+                            <option value="phone">Phone Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialty"><i class="fas fa-stethoscope"></i> Specialty:</label>
+                        <select id="specialty" required>
+                            <option value="">Select specialty</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="dermatology">Dermatology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="pediatrics">Pediatrics</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="doctor"><i class="fas fa-user-md"></i> Doctor:</label>
+                        <select id="doctor" required>
+                            <option value="">Select a doctor</option>
+                            <option value="dr-smith">Dr. John Smith</option>
+                            <option value="dr-johnson">Dr. Sarah Johnson</option>
+                            <option value="dr-brown">Dr. Michael Brown</option>
+                            <option value="dr-lee">Dr. Emily Lee</option>
+                            <option value="dr-garcia">Dr. Daniel Garcia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date"><i class="fas fa-calendar"></i> Date:</label>
+                        <input type="date" id="date" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="time"><i class="fas fa-clock"></i> Time:</label>
+                        <select id="time" required>
+                            <option value="">Select time</option>
+                            <option value="9:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="1:00">1:00 PM</option>
+                            <option value="2:00">2:00 PM</option>
+                            <option value="3:00">3:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason"><i class="fas fa-pen"></i> Reason for Visit:</label>
+                        <input type="text" id="reason" placeholder="Brief description">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullname"><i class="fas fa-user"></i> Full Name:</label>
+                        <input type="text" id="fullname" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                        <input type="email" id="email" placeholder="Your email address" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone:</label>
+                        <input type="tel" id="phone" placeholder="Your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="insurance"><i class="fas fa-file-medical"></i> Insurance:</label>
+                        <input type="text" id="insurance" placeholder="Insurance provider (if applicable)">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary">Book Appointment</button>
+            </form>
+        </section>
+
+        <section class="appointment-details" id="appointment-details">
+            <!-- Appointment details will be displayed here -->
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HealthCare Plus</h3>
+                <p>Making healthcare accessible for everyone.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@healthcareplus.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 HealthCare Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

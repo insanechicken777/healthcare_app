@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - HealthCare Plus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Add this CSS to style the grid for two doctors per row */
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between cards */
+            margin-top: 20px;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .doctor-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .doctor-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .doctor-actions {
+            margin-top: 15px;
+        }
+
+        .btn-secondary,
+        .btn-outline {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-secondary {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #007BFF;
+            border: 2px solid #007BFF;
+        }
+
+        .btn-outline:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <h1>HealthCare Plus</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+                <li><a href="doctors.html" class="active"><i class="fas fa-user-md"></i> Doctors</a></li>
+                <li><a href="prescriptions.html"><i class="fas fa-prescription-bottle-alt"></i> Prescriptions</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="page-banner">
+        <h2>Our Medical Team</h2>
+        <p>Meet our highly qualified healthcare professionals</p>
+    </div>
+
+    <div class="container">
+        <div class="doctors-grid">
+            <!-- Doctor Card 1 -->
+            <div class="doctor-card" data-specialty="cardiology">
+                <div class="doctor-image">
+                    <img src="John Doe.png" alt="Dr. John Doe">
+                </div>
+                <div class="doctor-info">
+                    <h3>Dr. John Doe</h3>
+                    <p class="specialty">Cardiology</p>
+                    <p class="experience"><i class="fas fa-clock"></i> 15+ Years Experience</p>
+                    <p class="education">MD, Harvard Medical School</p>
+                    <p class="description">Dr. Doe specializes in cardiovascular diseases and interventional cardiology procedures.</p>
+                    <div class="doctor-actions">
+                        <button class="btn-secondary" onclick="location.href='appointments.html'"><i class="fas fa-calendar-plus"></i> Book Appointment</button>
+                        <button class="btn-outline" onclick="viewProfile('john-doe')"><i class="fas fa-user"></i> View Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Card 2 -->
+            <div class="doctor-card" data-specialty="dermatology">
+                <div class="doctor-image">
+                    <img src="Jane Smith.png" alt="Dr. Jane Smith">
+                </div>
+                <div class="doctor-info">
+                    <h3>Dr. Jane Smith</h3>
+                    <p class="specialty">Dermatology</p>
+                    <p class="experience"><i class="fas fa-clock"></i> 12+ Years Experience</p>
+                    <p class="education">MD, Johns Hopkins University</p>
+                    <p class="description">Dr. Smith is an expert in dermatological conditions, cosmetic procedures, and skin cancer treatments.</p>
+                    <div class="doctor-actions">
+                        <button class="btn-secondary" onclick="location.href='appointments.html'"><i class="fas fa-calendar-plus"></i> Book Appointment</button>
+                        <button class="btn-outline" onclick="viewProfile('jane-smith')"><i class="fas fa-user"></i> View Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Card 3 -->
+            <div class="doctor-card" data-specialty="neurology">
+                <div class="doctor-image">
+                    <img src="Robert.png" alt="Dr. Robert Johnson">
+                </div>
+                <div class="doctor-info">
+                    <h3>Dr. Robert Johnson</h3>
+                    <p class="specialty">Neurology</p>
+                    <p class="experience"><i class="fas fa-clock"></i> 18+ Years Experience</p>
+                    <p class="education">MD, Yale School of Medicine</p>
+                    <p class="description">Dr. Johnson specializes in neurological disorders, stroke management, and neurodegenerative diseases.</p>
+                    <div class="doctor-actions">
+                        <button class="btn-secondary" onclick="location.href='appointments.html'"><i class="fas fa-calendar-plus"></i> Book Appointment</button>
+                        <button class="btn-outline" onclick="viewProfile('robert-johnson')"><i class="fas fa-user"></i> View Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Card 4 -->
+            <div class="doctor-card" data-specialty="pediatrics">
+                <div class="doctor-image">
+                    <img src="Sarah.png" alt="Dr. Sarah Williams">
+                </div>
+                <div className='doctor-info'>
+                    <h3>Dr. Sarah Williams</h3>
+                    ...
