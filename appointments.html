@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - HealthCare Plus</title>
+    <meta name="description" content="Schedule your appointment online with HealthCare Plus specialists. Choose your doctor, date, and time easily.">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="container">
+                <h2>Book Your Appointment</h2>
+                <p>Schedule a visit with our specialists easily and conveniently.</p>
+            </div>
+        </section>
+
+        <!-- Appointment Form Section -->
+        <div class="container section">
+            <section class="appointment-section card">
+                <h2>Schedule Your Appointment</h2>
+                <form id="appointment-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="appointment-type"><i class="fas fa-list" aria-hidden="true"></i> Appointment Type:</label>
+                            <select id="appointment-type" name="appointment-type" class="form-control" required>
+                                <option value="">Select type</option>
+                                <option value="In-Person Visit">In-Person Visit</option>
+                                <option value="Video Consultation">Video Consultation</option>
+                                <option value="Phone Consultation">Phone Consultation</option>
+                            </select>
+                            <div class="invalid-feedback" id="appointment-type-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialty"><i class="fas fa-stethoscope" aria-hidden="true"></i> Specialty:</label>
+                            <select id="specialty" name="specialty" class="form-control" required>
+                                <option value="">Select specialty</option>
+                                <option value="Cardiology">Cardiology</option>
+                                <option value="Dermatology">Dermatology</option>
+                                <option value="Neurology">Neurology</option>
+                                <option value="Pediatrics">Pediatrics</option>
+                                <!-- Add more specialties as needed -->
+                            </select>
+                             <div class="invalid-feedback" id="specialty-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                         <div class="form-group">
+                            <label for="doctor"><i class="fas fa-user-md" aria-hidden="true"></i> Doctor:</label>
+                            <select id="doctor" name="doctor" class="form-control" required>
+                                <option value="">Select a doctor</option>
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                             <div class="invalid-feedback" id="doctor-feedback"></div>
+                        </div>
+                         <div class="form-group">
+                            <label for="date"><i class="fas fa-calendar" aria-hidden="true"></i> Date:</label>
+                            <input type="date" id="date" name="date" class="form-control" required>
+                             <div class="invalid-feedback" id="date-feedback"></div>
+                        </div>
+                    </div>
+
+                     <div class="form-row">
+                        <div class="form-group">
+                            <label for="time"><i class="fas fa-clock" aria-hidden="true"></i> Time:</label>
+                            <select id="time" name="time" class="form-control" required>
+                                <option value="">Select time</option>
+                                <option value="09:00 AM">9:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="01:00 PM">1:00 PM</option>
+                                <option value="02:00 PM">2:00 PM</option>
+                                <option value="03:00 PM">3:00 PM</option>
+                            </select>
+                            <div class="invalid-feedback" id="time-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason"><i class="fas fa-pen" aria-hidden="true"></i> Reason for Visit (Optional):</label>
+                            <input type="text" id="reason" name="reason" class="form-control" placeholder="Brief description (e.g., checkup, new symptom)">
+                            <div class="invalid-feedback" id="reason-feedback"></div>
+                        </div>
+                    </div>
+
+                    <hr style="margin: 25px 0;">
+                    <h4>Patient Information</h4>
+
+                    <div class="form-row">
+                         <div class="form-group">
+                            <label for="fullname"><i class="fas fa-user" aria-hidden="true"></i> Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Your full name" required>
+                            <div class="invalid-feedback" id="fullname-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope" aria-hidden="true"></i> Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your email address" required>
+                            <div class="invalid-feedback" id="email-feedback"></div>
+                        </div>
+                    </div>
+
+                     <div class="form-row">
+                         <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone" aria-hidden="true"></i> Phone:</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your phone number" required>
+                            <div class="invalid-feedback" id="phone-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="insurance"><i class="fas fa-file-medical" aria-hidden="true"></i> Insurance Provider (Optional):</label>
+                            <input type="text" id="insurance" name="insurance" class="form-control" placeholder="Insurance provider name (if applicable)">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment</button>
+                </form>
+            </section>
+
+            <!-- Appointment Confirmation Details Area -->
+            <section class="appointment-details" id="appointment-details">
+                <!-- Confirmation details will be displayed here by JavaScript -->
+            </section>
+
+             <!-- Optional: Display Existing Appointments -->
+            <!--
+            <section class="existing-appointments section card">
+                <h2>Your Upcoming Appointments</h2>
+                <div class="appointment-list">
+                    <p class="text-center text-muted">Loading your appointments...</p>
+                </div>
+            </section>
+            -->
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- JS Links -->
+    <script src="dataService.js"></script>
+    <script src="app.js"></script>
+    <script src="appointments.js"></script>
+
+</body>
+</html>

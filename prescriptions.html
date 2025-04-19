@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Prescriptions - HealthCare Plus</title>
+    <meta name="description" content="View and manage your active prescriptions and prescription history securely with HealthCare Plus.">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+
+         <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="container">
+                <h2>Your Prescriptions</h2>
+                <p>View and manage your prescribed medications online.</p>
+            </div>
+        </section>
+
+        <!-- Prescriptions Section -->
+        <div class="container section">
+
+            <!-- Active Prescriptions Header -->
+            <div class="prescriptions-header">
+                <h3><i class="fas fa-prescription-bottle-alt" aria-hidden="true"></i> Active Prescriptions</h3>
+                <div class="prescription-actions">
+                    <button id="refill-all-btn" class="btn btn-primary btn-sm"><i class="fas fa-sync" aria-hidden="true"></i> Refill All Eligible</button>
+                    <button class="btn btn-secondary btn-sm" onclick="window.print()"><i class="fas fa-print" aria-hidden="true"></i> Print Page</button>
+                </div>
+            </div>
+
+            <!-- Active Prescriptions Grid -->
+            <div id="prescriptions-container" class="prescriptions-grid">
+                <!-- Active prescriptions loaded here by JS -->
+                 <div class="loading-spinner" style="grid-column: 1 / -1;">
+                    <i class="fas fa-spinner fa-pulse"></i>
+                    <p>Loading active prescriptions...</p>
+                </div>
+            </div>
+
+            <!-- Message for No Active Prescriptions -->
+            <div class="no-prescriptions card" id="no-prescriptions" style="display: none;">
+                <i class="fas fa-prescription-bottle-alt" aria-hidden="true"></i>
+                <h3>No Active Prescriptions Found</h3>
+                <p>You don't seem to have any active prescriptions at the moment.</p>
+                <a href="appointments.html" class="btn btn-primary">Schedule an Appointment</a>
+            </div>
+
+            <!-- Prescription History -->
+            <div class="prescription-history section">
+                 <h3><i class="fas fa-history" aria-hidden="true"></i> Prescription History</h3>
+                 <div class="history-filters form-group">
+                    <label for="history-filter">Show history from:</label>
+                    <select id="history-filter" class="form-control" style="max-width: 250px;"> <!-- Limit width -->
+                        <option value="all">All Time</option>
+                        <option value="3months">Last 3 Months</option>
+                        <option value="6months">Last 6 Months</option>
+                        <option value="1year">Last Year</option>
+                    </select>
+                 </div>
+                 <div id="prescription-history-container">
+                    <!-- History table loaded here by JS -->
+                     <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-pulse"></i>
+                        <p>Loading prescription history...</p>
+                    </div>
+                 </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- JS Links -->
+    <script src="dataService.js"></script>
+    <script src="app.js"></script>
+    <script src="prescriptions.js"></script>
+
+</body>
+</html>

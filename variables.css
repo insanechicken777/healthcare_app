@@ -1,0 +1,33 @@
+/* CSS Variables */
+:root {
+    --primary-color: #007BFF;
+    --primary-color-dark: #0056b3;
+    --secondary-color: #6c757d;
+    --secondary-color-dark: #495057;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --text-color: #333;
+    --text-muted: #6c757d;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #17a2b8;
+
+    --header-bg: var(--primary-color);
+    --footer-bg: #2c3e50;
+    --footer-text: #ecf0f1;
+
+    --font-family-sans-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --base-font-size: 16px;
+    --line-height-base: 1.6;
+
+    --border-radius: 8px;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+
+    --container-max-width: 1200px;
+    --spacing-unit: 1rem; /* Approx 16px */
+}
